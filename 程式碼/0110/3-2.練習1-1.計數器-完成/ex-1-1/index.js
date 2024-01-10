@@ -10,6 +10,6 @@ const total = document.getElementById('total')
 // 第一個參數是事件名稱，第二個參數是事件發生時要執行的函式
 total.addEventListener('click', function () {
   // 從網頁上得到的文字是字串類型，Number()是將文字轉成數字
-  // 數字與文字加法運算，會變成字串串接，因此要先轉為數字作加法運算
+  // 數字與字串作加法運算時，會自動將數字轉成字串，因此要先將文字轉成數字
   total.innerText = Number(total.innerText) + 1
 })
