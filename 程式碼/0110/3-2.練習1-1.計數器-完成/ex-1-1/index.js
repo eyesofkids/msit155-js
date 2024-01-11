@@ -1,8 +1,15 @@
 // total是由id="total"的元素物件
+// getElementById是瀏覽器內建的方法，可以從網頁上找到id="total"的元素物件
+// getElementById返回的是元素物件(HTMLElement | null)，可以直接使用
 const total = document.getElementById('total')
 
+// 這裡可以檢查total是否有找到元素物件
+if (total===null) {
+  console.log('total是null')
+}
+
 // total.innerText是total元素物件的文字內容
-// 也可以用來設定文字內容
+// 也可以用來設定文字內容(setter/getter同時都有的設計)
 // console.log(total.innerText)
 // total.innerText = 888
 
