@@ -18,6 +18,9 @@ const passwordError = document.getElementById('passwordError')
 // 檢查dom元素是否有正確獲得
 // console.log(username, password, login, message)
 
+// 一進入頁面先聚焦到第一個欄位(提供更好的使用者體驗)
+username.focus()
+
 // 加入滑鼠點按事件觸發函式在 login 按鈕上
 login.addEventListener('click', function () {
   // 由於使用者會反覆操作此表單，每次檢查時要先把所有錯誤訊息清空
