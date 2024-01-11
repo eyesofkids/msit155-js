@@ -13,6 +13,10 @@ function add(x, y) {
 
 console.log(add())
 
+// ----------------------------------------------
+
+// ES6後加入的傳入參數預設值的新語法
+// 只有沒給值(或給undefined)的時候才會用預設值
 function add2(x = 1, y = 2) {
   console.log(x, y)
   return x + y
