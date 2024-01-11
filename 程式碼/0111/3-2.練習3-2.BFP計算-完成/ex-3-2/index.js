@@ -39,7 +39,7 @@ calc.addEventListener('click', function () {
   // sex
   let s = ''
 
-  for (let i = 0, length = radios.length; i < length; i++) {
+  for (let i = 0; i < radios.length; i++) {
     if (radios[i].checked) {
       // 尋找被選取的radio，並取得其value
       s = radios[i].value
