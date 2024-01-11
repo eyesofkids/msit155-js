@@ -3,6 +3,9 @@
 // getElementById返回的是元素物件(HTMLElement | null)，可以直接使用
 // h1
 const total = document.getElementById('total')
+// 如果改用querySelector
+//const total = document.querySelector('#total')
+
 // button
 const increment = document.getElementById('increment')
 const decrement = document.getElementById('decrement')
