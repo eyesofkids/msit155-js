@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習3-2.BFP計算</title>
+</head>
+
+<body>
+    <h1>練習3-1. BFP計算</h1>
+    <hr>
+    <!-- 需要加入form標記包裹才有reset功能 -->
+    <!-- !!注意!!form中的按鈕(button)要加入類型(type)
+        ，因為在form中的按鈕預設是提交類型(submit) -->
+    <form>
+        身高(公分): <input type="text" id="height"><br>
+        體重(公斤): <input type="text" id="weight"><br>
+        年齡: <input type="text" id="age"><br>
+        性別: 
+        <label><input type="radio" name="sex" value="男"> 男</label>
+        <label><input type="radio" name="sex" value="女"> 女</label>
+        <br>
+        <button type="button" id="calc">計算</button>
+        <button type="reset">清除</button>
+        <hr>
+    </form>
+    結果:
+    <p id="result"></p>
+
+    <!-- 在主體(body)區域的最後面導入js檔案 -->
+    <script src="index.js"></script>
+</body>
+
+</html>
