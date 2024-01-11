@@ -15,7 +15,7 @@ const login = document.getElementById('login')
 const message = document.getElementById('message')
 
 // 檢查dom元素是否有正確獲得
-// console.log(height, weight, calc, result);
+//console.log(username, password, login, message)
 
 // BMI = 體重(公斤) / 身高<sup>2</sup>(公尺平方)
 
