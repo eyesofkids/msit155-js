@@ -24,13 +24,15 @@ login.addEventListener('click', function () {
   // 檢查username是否有填寫
   // if (username.value === '') {
   // if (username.value.length === 0) {
+  // 應用了falsy的特性，如果username.value是空字串，則為false，否則為true
+  // NOT運算子，將後面的值轉為布林值後，再取相反的值
   if (!username.value) {
     errorMessage += 'username沒填'
   }
 
   // 上面的if的寫法相當於下面的這段檢查語法
   // if (username.value) {
-  //   // 有填，所以沒事
+  //    有填，所以沒事
   // } else {
   //    errorMessage += 'username沒填'
   // }
@@ -38,6 +40,7 @@ login.addEventListener('click', function () {
   // --------
   // 檢查password是否有填寫
   if (!password.value) {
+    // 三元運算子，如果前面的條件成立，則回傳逗號+空白，否則回傳空字串
     // 如果errorMessage目前裡面有資料，則加逗號在前面，不然就是第一個錯誤訊息
     const prefix = errorMessage ? ', ' : ''
     errorMessage += prefix + 'password沒填'
