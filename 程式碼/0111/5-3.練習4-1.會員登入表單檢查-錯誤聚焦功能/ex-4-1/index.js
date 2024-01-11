@@ -55,8 +55,13 @@ login.addEventListener('click', function () {
   }
 
   // 利用每個欄位的錯誤訊息來偵測是否有錯誤，然後進行聚焦(focus)
+  // 以下使用錯誤訊息是否有存在來判斷
+  // 注意要依上下次序寫，而且每個if都要寫return，否則會繼續往下執行
   if (usernameError.innerText) {
     username.focus()
+    // 在函式中可以使用return搭配if...else作更有彈性的流程控制
+    // return會跳出函式，不再執行之後的程式碼
+    // 回傳的值並不重要，主要是利用函式對return的處理機制而已
     return
   }
 
