@@ -35,9 +35,12 @@ login.addEventListener('click', function () {
   //    errorMessage += 'username沒填'
   // }
 
+  // --------
   // 檢查password是否有填寫
   if (!password.value) {
-    errorMessage += 'password沒填'
+    // 如果errorMessage目前裡面有資料，則加逗號在前面，不然就是第一個錯誤訊息
+    const prefix = errorMessage ? ', ' : ''
+    errorMessage += prefix + 'password沒填'
   }
 
   message.innerText = errorMessage
