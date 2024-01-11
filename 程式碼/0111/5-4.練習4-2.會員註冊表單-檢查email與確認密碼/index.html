@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>練習4-2. 會員註冊表單</title>
+    <style>
+      .error {
+        color: red;
+        font-size: smaller;
+      }
+    </style>
+    <!-- 引入外部函式庫，檢查用 https://www.npmjs.com/package/validator -->
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+  </head>
+
+  <body>
+    <h1>練習4-2. 會員註冊表單</h1>
+    姓名: <input type="text" id="fullname" required />
+    <span class="error" id="fullnameError"></span>
+    <br />
+    Email: <input type="email" id="email" required />
+    <span class="error" id="emailError"></span>
+    <br />
+    帳號: <input type="text" id="username" />
+    <span class="error" id="usernameError"></span>
+    <br />
+    密碼: <input type="password" id="password" />
+    <span class="error" id="passwordError"></span>
+    <br />
+    確認密碼: <input type="password" id="password2" />
+    <span class="error" id="password2Error"></span>
+    <br />
+    <button id="register">註冊</button>
+
+    <!-- 導入js檔案 -->
+    <script src="index.js"></script>
+  </body>
+</html>
