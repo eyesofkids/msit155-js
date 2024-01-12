@@ -1,3 +1,4 @@
+// 1. 基本的函式宣告改寫
 // FD
 // 函式宣告語法，一般稱為函式宣告式
 function foo1(x, y) {
@@ -21,6 +22,7 @@ const foo3 = (x, y) => {
 }
 
 // ---------------------------------------------
+// 2. 單一行return的函式主體簡化
 const bar2 = function (x, y) {
   return x + y
 }
@@ -30,6 +32,7 @@ const bar2 = function (x, y) {
 const bar3 = (x, y) => x + y
 
 // ---------------------------------------------
+// 3. 單一行非return的函式主體簡化
 // 箭頭函式，當函式主體中只有一行而且是沒return時，通常也可以簡化
 const baz2 = function (x, y) {
   console.log(x, y)
@@ -39,11 +42,12 @@ const baz2 = function (x, y) {
 const baz3 = (x, y) => console.log(x, y)
 
 // ---------------------------------------------
+// 4. 單一個傳入參數時，可以省略圓括號
 const qux2 = function (x) {
   console.log(x)
 }
 
 // 實際上相當於 (x) => { return console.log(x) }
-// 只有一個參數時，可以省略圓括號
+// 略過prettier的格式化
 // prettier-ignore
-const qux2 = x => console.log(x)
+const qux3 = x => console.log(x)
