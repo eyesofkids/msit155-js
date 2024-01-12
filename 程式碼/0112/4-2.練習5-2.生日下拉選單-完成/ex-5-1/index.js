@@ -37,34 +37,48 @@ mm.innerHTML = createOptions(1, 12)
 // 呈現dd選項, 等yy與mm選了之後再決定
 dd.innerHTML = `<option value="0">請選擇</option>`
 
+// 定義三個變數，記錄使用者選擇的年月日
+// 使用"number"類型，之後要作計算用
+// 初始值對應的是"請選擇"這個選項的value為0
 let birthY = 0
 let birthM = 0
 let birthD = 0
 
 // yy選項有改變事件
 yy.addEventListener('change', function () {
+  // 需要轉為數字，保持變數一直是數字資料類型與之後要作檢查
   birthY = Number(yy.value)
 
-  // yy 與 mm有值時，產生dd的選項
+  //年 && 月有值時，呈現日的選項值
   if (birthY && birthM) {
     const maxDays = new Date(birthY, birthM, 0).getDate()
     dd.innerHTML = createOptions(1, maxDays)
+    // 內部記錄的日要歸零，要讓使用者重新選擇後再記錄，以免造成記錄錯誤
     birthD = 0
   }
+
+  console.log(birthY, birthM, birthD)
 })
 
 // mm選項有改變事件
 mm.addEventListener('change', function () {
+  // 需要轉為數字，保持變數一直是數字資料類型與之後要作檢查
   birthM = Number(mm.value)
-  // yy 與 mm有值時，產生dd的選項
+
+  //年 && 月有值時，呈現日的選項值
   if (birthY && birthM) {
     const maxDays = new Date(birthY, birthM, 0).getDate()
     dd.innerHTML = createOptions(1, maxDays)
+    // 內部記錄的日要歸零，要讓使用者重新選擇後再記錄，以免造成記錄錯誤
     birthD = 0
   }
+
+  console.log(birthY, birthM, birthD)
 })
 
 // yy選項有改變事件
 dd.addEventListener('change', function () {
+  // 需要轉為數字，保持變數一直是數字資料類型與之後要作檢查
   birthD = Number(dd.value)
+  console.log(birthY, birthM, birthD)
 })
