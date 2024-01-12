@@ -20,11 +20,6 @@ console.log(employee)
 // 刪除屬性
 delete employee.age
 
-// 用 for in 遍歷(迭代)物件的屬性
-for (let key in employee) {
-  console.log(key, employee[key])
-}
-
 // 工廠模式(建立新物件)
 function createEmployee(id, name, age, phone) {
   // 這裡可以由傳入值來調整所需的屬性值，建立單例物件
