@@ -37,3 +37,13 @@ const baz2 = function (x, y) {
 
 // 實際上相當於 (x, y) => { return console.log(x, y) }
 const baz3 = (x, y) => console.log(x, y)
+
+// ---------------------------------------------
+const qux2 = function (x) {
+  console.log(x)
+}
+
+// 實際上相當於 (x) => { return console.log(x) }
+// 只有一個參數時，可以省略圓括號
+// prettier-ignore
+const qux2 = x => console.log(x)
