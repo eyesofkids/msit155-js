@@ -14,6 +14,7 @@ const foo2 = function (x, y) {
 
 // Arrow Function
 // 箭頭函式可以從函式表達式語法簡化而來
+// 因為花括號中的函式主體超過一行，所以不能省略
 const foo3 = (x, y) => {
   console.log(x, y)
   return x + y
