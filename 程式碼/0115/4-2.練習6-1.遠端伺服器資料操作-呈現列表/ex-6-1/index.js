@@ -5,14 +5,14 @@ const serverUrl =
 const updateView = (data) => {
   // console.log(data)
   const display = data
-  // 將陣列中的每個物件轉成HTML字串
-  // .map((v, i) => {
-  //   return `<li>${v.id}/${v.name}/${v.age}</li>`
-  // })
-  // .join('') //將陣列轉成字串
+    // 將陣列中的每個物件轉成HTML字串
+    .map((v, i) => {
+      return `<li>${v.id}/${v.name}/${v.age}</li>`
+    })
+    .join('') //將陣列轉成字串
 
-  // 顯示在網頁上
-  // document.getElementById('users').innerHTML = display
+  //顯示在網頁上
+  document.getElementById('users').innerHTML = display
 
   // -------------------------------
   // 方式二：用 for 迴圈與innerHTML來處理
