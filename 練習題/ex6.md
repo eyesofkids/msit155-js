@@ -1,11 +1,5 @@
 # 說明
 
-## 得到所有資料
-
-> 註: 回應的 json 為物件陣列
-
-- https://my-json-server.typicode.com/eyesofkids/json-fake-data/users
-
 ## 題目
 
 > 註: 以下所有的使用實作策略，均為使用遠端 api 的 json 格式呼叫。
@@ -26,9 +20,11 @@
 
 > 註: 回應的 json 為物件陣列
 
-- https://my-json-server.typicode.com/eyesofkids/json-fake-data/users?name_like=陳&age_gte=20
+- https://my-json-server.typicode.com/eyesofkids/json-fake-data/users
 
 ### 得到單一筆資料(用 id 在網址上當參數)
+
+- https://my-json-server.typicode.com/eyesofkids/json-fake-data/users/107001
 
 > 註: 回應的 json 為物件
 
