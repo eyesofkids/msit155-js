@@ -29,14 +29,15 @@ const updateView = (data) => {
   // }
 }
 
-// await關鍵字只能在async函式中使用
+// await關鍵字只能在async函式中使用，async函式會回傳一個Promise物件
+// top-level await目前要在模組類型中支援(在瀏覽器中不直接支援，可以用在Node.js中)
 async function getUsers() {
+  // 使用try...catch陳述來處理錯誤的
   try {
     // 異步轉同步的陳述句(在這一行會等候伺服器回應)
     const response = await fetch(serverUrl, { method: 'GET' })
     // 異步轉同步的陳述句(等候回應物件轉為JS的物件資料)
     const data = await response.json()
-
     // 更新網頁上的視圖資料
     updateView(data)
   } catch (err) {
@@ -44,7 +45,7 @@ async function getUsers() {
   }
 }
 
-// 呼叫函式
+// 記得呼叫函式
 getUsers()
 
 // fetch(serverUrl, { method: 'GET' })
