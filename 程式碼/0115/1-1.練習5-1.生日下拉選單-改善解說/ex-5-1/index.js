@@ -28,7 +28,13 @@ function createOptions(min, max) {
   return options
 }
 
+// 使用陣列的map()方法來產生選項
+// 產生1...N的陣列
+// https://stackoverflow.com/questions/3746725/how-to-create-an-array-containing-1-n
 function createOptions2(min, max) {
+  // Array(5) 產生一個長度為5的陣列，內容為undefined
+  // fill(1) 將陣列內容填滿1
+  // map((v, i) => {}) 將陣列內容一個一個取出，並執行回呼函式
   return Array(max + 2 - min)
     .fill(1)
     .map((v, i) => {
@@ -41,6 +47,7 @@ yy.innerHTML = createOptions(1950, 2024)
 
 // 呈現mm選項, 1-12
 mm.innerHTML = createOptions(1, 12)
+// 如果用陣列的map()方法來產生選項，最後要用join('')來合併成字串
 //mm.innerHTML = createOptions2(1, 12).join('')
 
 // 呈現dd選項, 等yy與mm選了之後再決定

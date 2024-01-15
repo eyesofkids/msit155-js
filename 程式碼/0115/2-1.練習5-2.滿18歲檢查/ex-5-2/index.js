@@ -50,8 +50,8 @@ mm.innerHTML = createOptions(1, 12)
 dd.innerHTML = `<option value="0">請選擇</option>`
 
 // 定義三個變數，記錄使用者選擇的年月日
-// 使用"number"類型，之後要作計算用
-// 初始值對應的是"請選擇"這個選項的value為0
+// 使用"數字(number)"類型，之後要作計算用，在應用過程中要一直保持資料類型一致
+// 初始值對應的是 "請選擇" 這個選項的 value為 0
 let birthY = 0
 let birthM = 0
 let birthD = 0
@@ -104,10 +104,14 @@ check.addEventListener('click', function () {
     return //跳出事件處理函式
   }
 
+  // 18歲的毫秒數
   const ms18yrs = 18 * 365.25 * 24 * 60 * 60 * 1000
+  // 現在時間的毫秒數，也可以用`Date.now()`取得，或是`+new Date()`
   const msNow = Number(new Date())
+  // 使用者選擇的出生年月日的毫秒數
   const msBirth = Number(new Date(`${birthY}/${birthM}/${birthD}`))
 
+  // 比較現在時間與使用者選擇的出生年月日的毫秒數
   if (msNow - msBirth >= ms18yrs) {
     alert('V 滿18歲')
   } else {
