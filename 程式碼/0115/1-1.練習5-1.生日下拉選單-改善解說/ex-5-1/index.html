@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習5-1. 生日下拉選單</title>
+</head>
+
+<body>
+    <h1>練習5-1. 生日下拉選單</h1>
+    <hr>
+    <!-- 需要加入form標記包裹才有reset功能 -->
+    <!-- !!注意!!form中的按鈕(button)要加入類型(type)
+        ，因為在form中的按鈕預設是提交類型(submit) -->
+
+    <form>
+        西元
+        <select id="yy">
+            <option value="1950">1950</option>
+            <option value="1950">1950</option>
+        </select>
+        年
+        <select id="mm">
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        月
+        <select id="dd">
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        日
+        <button type="button">送出</button>
+        <button type="reset">清除</button>
+    </form>
+
+    <!-- 在主體(body)區域的最後面導入js檔案 -->
+    <script src="index.js"></script>
+</body>
+
+</html>
