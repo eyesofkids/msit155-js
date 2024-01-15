@@ -7,6 +7,7 @@ console.log(data)
 const year = 2024
 const month = 1
 
+// --- 產生日期資料陣列 START ---
 // firstDay 是這個月的第一天是星期幾(索引值0~6，星期日為0)
 const firstDay = new Date(`${year}/${month}/1`).getDay()
 
@@ -19,14 +20,14 @@ const days = new Date(year, month, 0).getDate()
 
 console.log(days)
 
-// 最前面的空白陣列
+// 最前面的空白陣列(根據第一天是星期幾，決定要呈現幾個空白)
 const frontEmptyData = []
 
 for (let i = 0; i < firstDay; i++) {
   frontEmptyData.push('')
 }
 
-// 中間資料陣列
+// 中間資料陣列(日期資料)
 const valueData = []
 
 for (let i = 0; i < days; i++) {
@@ -34,16 +35,16 @@ for (let i = 0; i < days; i++) {
   valueData.push(String(i + 1))
 }
 
-// 最後的空白陣列
-// 最前面的空白陣列
-const tailEmptyData = []
+// 最後的空白陣列(42是7x6所有的數量 - 前面空白數- 中間資料數)
+const backEmptyData = []
 
 for (let i = 0; i < 42 - firstDay - days; i++) {
-  tailEmptyData.push('')
+  backEmptyData.push('')
 }
 
-console.log(frontEmptyData, valueData, tailEmptyData)
+console.log(frontEmptyData, valueData, backEmptyData)
 
-const allData = [...frontEmptyData, ...valueData, ...tailEmptyData]
+const allData = [...frontData, ...valueData, ...backEmptyData]
 
 console.log(allData)
+// --- 產生日期資料陣列 END ---
