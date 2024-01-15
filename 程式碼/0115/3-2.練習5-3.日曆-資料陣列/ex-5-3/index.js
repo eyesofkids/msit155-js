@@ -44,7 +44,7 @@ for (let i = 0; i < 42 - firstDay - days; i++) {
 
 console.log(frontEmptyData, valueData, backEmptyData)
 
-const allData = [...frontData, ...valueData, ...backEmptyData]
+const allData = [...frontEmptyData, ...valueData, ...backEmptyData]
 
 console.log(allData)
 // --- 產生日期資料陣列 END ---
